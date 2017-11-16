@@ -3,7 +3,7 @@
 
 int mandelbrot(std::complex<float> coord) {
     std::complex<float> z = 0;
-    int i{0};
+    int i = 0;
     while (std::abs(z) <= 2 && i < 10) {
         z = z*z + coord;
         i++;
@@ -36,8 +36,8 @@ int main() {
     std::cout << "Height? " << std::endl;
     std::cin >> height;
 
-    for (int i{1}; i <= height; i++) {
-        for (int j{1}; j <= width; j++) {
+    for (int i = 1; i <= height; i++) {
+        for (int j = 1; j <= width; j++) {
             
             float re = 5.0 * (j - 1 - width/2) / width;
             float im = 5.0 * (i - 1 - height/2) / height;
